@@ -16,7 +16,7 @@ api_key_header = APIKeyHeader(name=config.API_KEY_NAME_IN_HEADER,
 recommender = RecommendationEngine(top_k=config.top_k)
 
 
-@app.get('/predict', response_model=SightsList)
+@app.post('/predict', response_model=SightsList)
 async def recommend_similar_wines(
         sight_ids: List[int],
         cities: List[str]
