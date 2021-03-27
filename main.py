@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, List
 
 from fastapi import FastAPI, Depends, Security, HTTPException
 from fastapi.security.api_key import APIKeyQuery, APIKeyHeader, APIKey

@@ -3,4 +3,4 @@ services:
   ml-inference:
     build: .
     ports:
-      - "1312:8080"
+      - "8080:1312"
