@@ -19,7 +19,7 @@ recommender = RecommendationEngine(top_k=config.top_k)
 @app.post('/predict', response_model=SightsList)
 async def recommend_similar_wines(
         sight_ids: List[int],
-        cities: List[str]
+        cities: str
 ):
     sight_ids_rec = recommender.predict(sight_ids)
     recommendations = SightsList(sight_ids=sight_ids_rec)
