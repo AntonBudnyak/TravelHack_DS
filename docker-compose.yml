@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  ml-wine-recommendation-inference:
+    build: .
+    ports:
+      - "1312:1312"
+    env_file:
+      - vars.env
